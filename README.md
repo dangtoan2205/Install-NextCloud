@@ -20,55 +20,55 @@ Step 1: Install ONLYOFFICE Document Server on Ubuntu
            Command: </br>
            `sudo -i -u postgres psql -c "CREATE DATABASE onlyoffice;"`
 
-  -  Create the onlyoffice user.
-            Command:
+  -  Create the onlyoffice user. </br>
+            Command: </br>
             `sudo -i -u postgres psql -c "CREATE USER onlyoffice WITH password 'onlyoffice';"`
     
-   -  Grant permission.
-            Command:
+   -  Grant permission. </br>
+            Command: </br>
             `sudo -i -u postgres psql -c "GRANT ALL privileges ON DATABASE onlyoffice TO onlyoffice;"`
 
-   Note:
-            Both the username and password must be onlyoffice.
+   Note: </br>
+            Both the username and password must be onlyoffice. </br>
 
- - Install NodeJS from official repository
+ - Install NodeJS from official repository </br>
 
- - Add Node.js repostiory.
-           Command:
+ - Add Node.js repostiory. </br>
+           Command: </br>
            `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
 
- - Install Node.js.
-           Command:
+ - Install Node.js. </br>
+           Command: </br>
            `sudo apt install nodejs -y`
 
- - Install Redis server and Rabbitmq
-           Command:
+ - Install Redis server and Rabbitmq </br>
+           Command: </br>
            `sudo apt install redis-server rabbitmq-server`
 
- - Check their status.
-           Command:
-           `systemctl status redis-server`
+ - Check their status. </br>
+           Command: </br>
+           `systemctl status redis-server` </br>
            `systemctl status rabbitmq-server`
 
- -  You should see they are active (running).
+ -  You should see they are active (running). </br>
 
- - Install OnlyOffice document server
+ - Install OnlyOffice document server </br>
 
- - Add OnlyOffice repository
-           Command:
+ - Add OnlyOffice repository </br>
+           Command: </br>
            `echo "deb http://download.onlyoffice.com/repo/d... squeeze main" | sudo tee /etc/apt/sources.list.d/onlyoffice.list`
 
- - Import OnlyOffice public key.
-            Command:
+ - Import OnlyOffice public key. </br>
+            Command: </br>
             `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5`
 
- - Update local package index and install OnlyOffice document server.
-            Command:
-            `sudo apt update`
+ - Update local package index and install OnlyOffice document server. </br>
+            Command: </br>
+            `sudo apt update` </br>
             `sudo apt install onlyoffice-documentserver`
 
 Note:
-    During the installation process, you will be asked to enter PostgreSQL password for onlyoffice.
+    During the installation process, you will be asked to enter PostgreSQL password for onlyoffice. </br>
     Enter “onlyoffice” (without double quotes).
 
 
