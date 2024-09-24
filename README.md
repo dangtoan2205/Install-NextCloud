@@ -4,7 +4,7 @@
 
 ## 2. Install Nextcloud
 ` sudo snap install nextcloud `
-`sudo nextcloud.manual-install netvn password`
+` sudo nextcloud.manual-install netvn password `
 `sudo nextcloud.occ config:system:set trusted_domains 1 --value=*`
 `sudo nextcloud.enable-https self-signed`
 `sudo ufw allow 80,443/tcp`
