@@ -29,14 +29,14 @@
 `sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv` </br>
 `sudo snap connect nextcloud:removable-media` </br>
 
-`lsblk
-sudo fdisk /dev/sdX
-sudo mkfs.ext4 /dev/sdX1
-sudo blkid /dev/sdX1
-sudo mkdir /mnt/disk2
-sudo nano /etc/fstab
-PARTUUID=    /mnt/disk2      ext4    defaults        0       0
+`lsblk`
+`sudo fdisk /dev/sdX` </br>
+`sudo mkfs.ext4 /dev/sdX1` </br>
+`sudo blkid /dev/sdX1` </br>
+`sudo mkdir /mnt/disk2` </br>
+`sudo nano /etc/fstab` </br>
+`PARTUUID=    /mnt/disk2      ext4    defaults        0       0` </br>
 
-sudo mount /dev/sdX1`
+`sudo mount /dev/sdX1`
 
 
