@@ -26,10 +26,11 @@
 # Add HDDs
 ---
 `sudo lvresize -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv` </br>
+---
 `sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv` </br>
 `sudo snap connect nextcloud:removable-media` </br>
 
-`lsblk`
+`lsblk` </br>
 `sudo fdisk /dev/sdX` </br>
 `sudo mkfs.ext4 /dev/sdX1` </br>
 `sudo blkid /dev/sdX1` </br>
