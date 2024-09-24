@@ -26,7 +26,6 @@
 # Add HDDs
 ---
 `sudo lvresize -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv` </br>
----
 `sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv` </br>
 `sudo snap connect nextcloud:removable-media` </br>
 
