@@ -3,3 +3,4 @@
 ## 1. Install Ubuntu Server
 
 ## 2. Install Nextcloud
+` sudo snap install nextcloud `
