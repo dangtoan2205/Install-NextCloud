@@ -12,12 +12,12 @@
 ## 3. Install ONLYOFFICE Document Server and integrate on NextCloud.
 Step 1: Install ONLYOFFICE Document Server on Ubuntu
 
- - Install PostgreSQL from Ubuntu repository
-           Command:
+ - Install PostgreSQL from Ubuntu repository </br>
+           Command: </br>
            `sudo apt install postgresql`
 
-  - Then create the onlyoffice database.
-           Command:
+  - Then create the onlyoffice database. </br>
+           Command: </br>
            `sudo -i -u postgres psql -c "CREATE DATABASE onlyoffice;"`
 
   -  Create the onlyoffice user.
