@@ -9,17 +9,67 @@
 `sudo nextcloud.enable-https self-signed` </br>
 `sudo ufw allow 80,443/tcp` </br>
 
-## 3. Connect Nextcloud from Internet
+## 3. Install ONLYOFFICE Document Server and integrate on NextCloud.
+Step 1: Install ONLYOFFICE Document Server on Ubuntu
 
-## 4. 
+ - Install PostgreSQL from Ubuntu repository
+           Command:
+           `sudo apt install postgresql`
 
+  - Then create the onlyoffice database.
+           Command:
+           `sudo -i -u postgres psql -c "CREATE DATABASE onlyoffice;"`
 
+  -  Create the onlyoffice user.
+            Command:
+            `sudo -i -u postgres psql -c "CREATE USER onlyoffice WITH password 'onlyoffice';"`
+    
+   -  Grant permission.
+            Command:
+            `sudo -i -u postgres psql -c "GRANT ALL privileges ON DATABASE onlyoffice TO onlyoffice;"`
 
+   Note:
+            Both the username and password must be onlyoffice.
 
+ - Install NodeJS from official repository
 
+ - Add Node.js repostiory.
+           Command:
+           `curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -`
 
+ - Install Node.js.
+           Command:
+           `sudo apt install nodejs -y`
 
+ - Install Redis server and Rabbitmq
+           Command:
+           `sudo apt install redis-server rabbitmq-server`
 
+ - Check their status.
+           Command:
+           `systemctl status redis-server`
+           `systemctl status rabbitmq-server`
+
+ -  You should see they are active (running).
+
+ - Install OnlyOffice document server
+
+ - Add OnlyOffice repository
+           Command:
+           `echo "deb http://download.onlyoffice.com/repo/d... squeeze main" | sudo tee /etc/apt/sources.list.d/onlyoffice.list`
+
+ - Import OnlyOffice public key.
+            Command:
+            `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5`
+
+ - Update local package index and install OnlyOffice document server.
+            Command:
+            `sudo apt update`
+            `sudo apt install onlyoffice-documentserver`
+
+Note:
+    During the installation process, you will be asked to enter PostgreSQL password for onlyoffice.
+    Enter “onlyoffice” (without double quotes).
 
 
 -----
