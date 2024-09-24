@@ -24,11 +24,11 @@
 
 -----
 # Add HDDs
--
+
 `sudo lvresize -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv` </br>
 `sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv` </br>
 `sudo snap connect nextcloud:removable-media` </br>
-------
+
 After running the command above, shut down the Ubuntu Server, connect the new drive, restart the Ubuntu Server, and then run the following code to add the hard drive to the Ubuntu Server.
 ------
 `lsblk` </br>
