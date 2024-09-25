@@ -3,12 +3,13 @@
 ## 1. Install Ubuntu Server
 
 ## 2. Install Nextcloud
-`sudo snap install nextcloud` </br>
-`sudo nextcloud.manual-install netvn password` </br>
-`sudo nextcloud.occ config:system:set trusted_domains 1 --value=*` </br>
-`sudo nextcloud.enable-https self-signed` </br>
-`sudo ufw allow 80,443/tcp` </br>
-
+```
+sudo snap install nextcloud
+sudo nextcloud.manual-install netvn password
+sudo nextcloud.occ config:system:set trusted_domains 1 --value=*
+sudo nextcloud.enable-https self-signed
+sudo ufw allow 80,443/tcp
+```
 ## 3. Install ONLYOFFICE Document Server and integrate on NextCloud.
 Step 1: Install ONLYOFFICE Document Server on Ubuntu
 
