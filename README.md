@@ -48,9 +48,10 @@ Step 1: Install ONLYOFFICE Document Server on Ubuntu
 
  - Check their status. </br>
            Command: </br>
-           `systemctl status redis-server` </br>
-           `systemctl status rabbitmq-server`
-
+           ```
+           systemctl status redis-server` </br>
+           systemctl status rabbitmq-server`
+           ```
  -  You should see they are active (running). </br>
 
  - Install OnlyOffice document server </br>
