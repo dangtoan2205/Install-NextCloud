@@ -92,13 +92,40 @@ After running the command above, shut down the Ubuntu Server, connect the new dr
 
 `sudo mount /dev/sdX1`
 
+---
+Install Nginx for Ubuntu Server
+---
+```
+sudo apt update
+sudo apt upgrade
+```
+Install Nginx
+```
+sudo apt install nginx
+```
+Start nginx and status
+```
+sudo systemctl start nginx
+sudo systemctl status nginx
+```
+Configure Firewall
+```
+sudo ufw allow 'Nginx Full'
+```
+
+```
+Tệp cấu hình chính của Nginx nằm ở /etc/nginx/nginx.conf, và các tệp cấu hình cho từng trang web thường nằm trong thư mục /etc/nginx/sites-available/. Bạn có thể tạo một tệp mới để cấu hình cho trang web của mình.
+```
+
+```
+sudo systemctl restart nginx
+```
 # ONLYOFFICE Document Server
 -----
 ## Create file Docker Compose
 ```
 mkdir onlyoffice
 cd onlyoffice
-```
 
 docker-compose.yml
 ```
