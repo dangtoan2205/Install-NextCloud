@@ -120,7 +120,9 @@ volumes:
 ```
 ## Run Docker Compose
 Run ONLYOFFICE Document Server:
-`docker-compose up -d`
+```
+docker-compose up -d
+```
 Add code configure
 ```
 server {
