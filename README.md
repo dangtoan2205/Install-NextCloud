@@ -114,7 +114,8 @@ sudo ufw allow 'Nginx Full'
 ```
 
 ```
-Tệp cấu hình chính của Nginx nằm ở /etc/nginx/nginx.conf, và các tệp cấu hình cho từng trang web thường nằm trong thư mục /etc/nginx/sites-available/. Bạn có thể tạo một tệp mới để cấu hình cho trang web của mình.
+Tệp cấu hình chính của Nginx nằm ở /etc/nginx/nginx.conf, và các tệp cấu hình cho từng trang web thường nằm trong thư mục
+ /etc/nginx/sites-available/. Bạn có thể tạo một tệp mới để cấu hình cho trang web của mình.
 ```
 
 ```
