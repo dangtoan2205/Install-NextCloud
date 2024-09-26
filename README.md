@@ -99,16 +99,20 @@ Install Nginx for Ubuntu Server
 sudo apt update
 sudo apt upgrade
 ```
-Install Nginx
+1. Install Nginx
+   
 ```
 sudo apt install nginx
 ```
-Start nginx and status
+
+2. Start nginx and status
+
 ```
 sudo systemctl start nginx
 sudo systemctl status nginx
 ```
-Configure Firewall
+
+3. Configure Firewall
 ```
 sudo ufw allow 'Nginx Full'
 ```
