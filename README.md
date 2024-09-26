@@ -124,8 +124,41 @@ sudo systemctl restart nginx
 ---
 Install Docker for Ubuntu Server
 ---
-
-
+1. Update system
+```
+sudo apt update
+sudo apt upgrade
+```
+2. Install package
+```
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+```
+3. Add storage Docker
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+```
+4. Update list package
+```
+sudo apt update
+```
+5. Install Docker
+```
+sudo apt install docker-ce
+```
+6. Test status Docker
+```
+sudo systemctl start docker
+sudo systemctl status docker
+```
+7. Add users to the Docker group (optional)
+```
+sudo usermod -aG docker $USER
+```
+8. Check Docker installation
+```
+docker --version
+```
 
 # ONLYOFFICE Document Server
 -----
