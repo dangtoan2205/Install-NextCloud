@@ -120,6 +120,13 @@ Tệp cấu hình chính của Nginx nằm ở /etc/nginx/nginx.conf, và các t
 ```
 sudo systemctl restart nginx
 ```
+
+---
+Install Docker for Ubuntu Server
+---
+
+
+
 # ONLYOFFICE Document Server
 -----
 ## Create file Docker Compose
@@ -167,14 +174,19 @@ server {
     }
 }
 ```
+
 Test Nginx Configuration
+
 ```
 sudo nginx -t
 ```
+
 Reload Nginx
+
 ```
 sudo systemctl reload nginx
 ```
+
 ## Configure Nextcloud
 1. Login Nextcloud
 
