@@ -132,37 +132,40 @@ Install Docker for Ubuntu Server
 1. Update system
 ```
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 ```
-2. Install package
+2. Install Required Packages
 ```
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 ```
-3. Add storage Docker
+3. Add Docker’s Official GPG Key
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+4. Add Docker’s Repository
+```
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 ```
-4. Update list package
+5. Update APT Index Again
 ```
 sudo apt update
 ```
-5. Install Docker
+6. Install Docker Engine
 ```
-sudo apt install docker-ce
+sudo apt install docker-ce -y
 ```
-6. Test status Docker
+7. Start and Enable Docker
 ```
 sudo systemctl start docker
-sudo systemctl status docker
+sudo systemctl enable docker
 ```
-7. Add users to the Docker group (optional)
+8. Verify Docker Installation
+```
+sudo docker --version
+```
+9. Manage Docker as a Non-Root User (Optional)
 ```
 sudo usermod -aG docker $USER
-```
-8. Check Docker installation
-```
-docker --version
 ```
 
 # ONLYOFFICE Document Server
