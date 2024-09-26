@@ -118,6 +118,28 @@ services:
 volumes:
   onlyoffice_data:
 ```
+## Run Docker Compose
+Run ONLYOFFICE Document Server:
+`docker-compose up -d`
+Add code configure
+```
+server {
+    listen 80;
+    server_name 192.168.26.10;  # Địa chỉ IP của Nextcloud
+
+    location / {
+        proxy_pass http://192.168.26.10:81;  # Chuyển tiếp đến ONLYOFFICE trên cổng 81
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+        proxy_request_buffering off;
+    }
+}
+```
+Test Nginx Configuration
+`sudo nginx -t`
 
 
 
