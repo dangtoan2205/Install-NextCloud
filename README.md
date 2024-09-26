@@ -141,7 +141,41 @@ server {
 }
 ```
 Test Nginx Configuration
-`sudo nginx -t`
+```
+sudo nginx -t
+```
+Reload Nginx
+```
+sudo systemctl reload nginx
+```
+## Configure Nextcloud
+1. Login Nextcloud
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
