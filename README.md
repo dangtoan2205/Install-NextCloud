@@ -92,4 +92,32 @@ After running the command above, shut down the Ubuntu Server, connect the new dr
 
 `sudo mount /dev/sdX1`
 
+# ONLYOFFICE Document Server
+-----
+## Create file Docker Compose
+```
+mkdir onlyoffice
+cd onlyoffice
+```
+
+docker-compose.yml
+```
+version: '3'
+
+services:
+  onlyoffice-document-server:
+    image: onlyoffice/documentserver
+    ports:
+      - "81:80"  # Chuyển đổi cổng 80 của container sang cổng 81
+    environment:
+      - JWT_ENABLED=true
+      - JWT_SECRET=your_secret_key  # Thay thế bằng một khóa bảo mật
+    volumes:
+      - onlyoffice_data:/var/lib/onlyoffice/documentserver
+
+volumes:
+  onlyoffice_data:
+```
+
+
 
