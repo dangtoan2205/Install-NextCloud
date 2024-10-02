@@ -233,7 +233,7 @@ sudo systemctl reload nginx
 
 ## Configure Nextcloud
 1. Login Nextcloud
-
+http://192.168.26.10:8080
 
 
 
