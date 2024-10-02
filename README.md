@@ -174,8 +174,10 @@ sudo usermod -aG docker $USER
 ```
 mkdir onlyoffice
 cd onlyoffice
+```
 
 docker-compose.yml
+
 ```
 version: '3'
 
@@ -193,6 +195,7 @@ services:
 volumes:
   onlyoffice_data:
 ```
+
 ## Run Docker Compose
 Run ONLYOFFICE Document Server:
 ```
